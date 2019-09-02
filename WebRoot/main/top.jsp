@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.bjsxt.pojo.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*,com.hnu.pojo.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -37,7 +37,7 @@ $(function(){
 <body style="background:url(images/topbg.gif) repeat-x;">
 
     <div class="topleft">
-    <a href="main.html" target="_parent"><img src="images/logo.png" title="系统首页" /></a>
+    <a href="main.html" target="_parent"></a>
     </div>
         
             

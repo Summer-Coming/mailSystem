@@ -80,7 +80,7 @@ $(function(){
 	    <span><img src="images/leftico01.png" /></span>系统设置
 	    </div>
 	    	<ul class="menuson">
-	        <li><cite></cite><a href="user?oper=show" target="rightFrame">查看用户信息</a><i></i></li>
+	        <li><cite></cite><a href="system?oper=show" target="rightFrame">查看系统信息</a><i></i></li>
 	        </ul>    
 	    </dd>
 	    <dd>
@@ -88,7 +88,7 @@ $(function(){
 	    <span><img src="images/leftico01.png" /></span>服务启停
 	    </div>
 	    	<ul class="menuson">
-	        <li><cite></cite><a href="user?oper=show" target="rightFrame">查看用户信息</a><i></i></li>
+	        <li><cite></cite><a href="service?oper=show" target="rightFrame">服务启停</a><i></i></li>
 	        </ul>    
 	    </dd>
 	    <dd>
@@ -96,10 +96,17 @@ $(function(){
 	    <span><img src="images/leftico01.png" /></span>日常管理
 	    </div>
 	    	<ul class="menuson">
-	        <li><cite></cite><a href="user?oper=show" target="rightFrame">查看用户信息</a><i></i></li>
+	        <li><cite></cite><a href="mail?oper=show" target="rightFrame">发邮件</a><i></i></li>
 	        </ul>    
 	    </dd>
-	    
+	    <dd>
+	    <div class="title">
+	    <span><img src="images/leftico01.png" /></span>日志管理
+	    </div>
+	    	<ul class="menuson">
+	        <li><cite></cite><a href="log?oper=show" target="rightFrame">查看日志</a><i></i></li>
+	        </ul>    
+	    </dd>
     </dl>
 </body>
 </html>

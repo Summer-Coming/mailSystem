@@ -2,6 +2,8 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+System.out.println(path);
+System.out.println(basePath);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,7 +42,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="loginbody">
     
-    <span class="systemlogo"></span> 
     <br />
     <%
     	//声明java代码块进行错误提示语的逻辑校验
@@ -73,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%}
     	session.removeAttribute("reg");
     %>
-    <div class="loginbox loginbox1">
+    <div class="loginbox loginbox1" style="margin-top: 150px">
     <form action="user" method="post">
     	<input type="hidden" name="oper" value="login" />
     	<ul>

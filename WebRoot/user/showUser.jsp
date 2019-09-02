@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.bjsxt.pojo.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*,com.hnu.pojo.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -11,28 +11,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>无标题文档</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-  $(".click").click(function(){
-  $(".tip").fadeIn(200);
-  });
-  
-  $(".tiptop a").click(function(){
-  $(".tip").fadeOut(200);
-});
-
-  $(".sure").click(function(){
-  $(".tip").fadeOut(100);
-});
-
-  $(".cancel").click(function(){
-  $(".tip").fadeOut(100);
-});
-
-});
-</script>
-
 
 </head>
 
@@ -53,9 +31,7 @@ $(document).ready(function(){
     <div class="tools">
     
     	<ul class="toolbar">
-        <li class="click"><span><img src="images/t01.png" /></span>添加</li>
-        <li class="click"><span><img src="images/t02.png" /></span>修改</li>
-        <li><span><img src="images/t03.png" /></span>删除</li>
+        <li><span><img src="images/t01.png" /></span><a href="user?oper=addPage">添加用户</a></li>
         </ul>
 	</div>
     <table class="tablelist">
@@ -84,9 +60,9 @@ $(document).ready(function(){
 	        <%}else{ %>
 	         <td>普通用户</td>
 	        <%} %>
-	        <td><a href="#" class="tablelink">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-	        <a href="#" class="tablelink">删除</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
-	        <a href="#" class="tablelink">发邮件</a></td>
+	        <td><a href="user?oper=update&uid=<%=u.getUid()%>&uname=<%=u.getUname()%>&pwd=<%=u.getPwd()%>&type=<%=u.getType()%>" class="tablelink">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
+	        <a href="user?oper=delete&id=<%=u.getUid()%>" class="tablelink">删除</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
+	        <a href="mail?oper=show" class="tablelink">发邮件</a></td>
 	        </tr>
         <%} %> 
         </tbody>
